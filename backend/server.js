@@ -5,7 +5,10 @@ const productRoute=require("./routes/productRoutes")
 const userRoutes=require("./routes/userRoutes")
 const cors=require("cors")
 
-app.use(cors())
+app.use(cors({
+    origin:"http://localhost:3000",
+    credentials:true
+}))
 app.use(express.json())
 
 const port=3330
